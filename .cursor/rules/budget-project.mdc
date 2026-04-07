@@ -1,0 +1,26 @@
+---
+description: 가계부(budget-input) 프로젝트 공통 스택·제품 맥락
+alwaysApply: true
+---
+
+# 가계부 프로젝트 — 공통 규칙
+
+## 기술 스택
+
+- **빌드**: Vite, Vue 3
+- **스타일**: `<script setup>` + Composition API
+- **라우팅**: vue-router
+- **상태**: Pinia (`defineStore`)
+- **HTTP**: axios — 공통 인스턴스는 `src/api/client.js`에서만 생성·사용
+- **로컬 API**: json-server (`db.json`, 기본 `http://localhost:3000`)
+
+## 제품/UI
+
+- **모바일 웹앱** 느낌: 세로가 긴 뷰포트, 좁은 `max-width` 카드 레이아웃 유지
+- **화면 문구·라벨**: 한국어
+- **수입/지출 카테고리**: `db.json`의 `categories`를 json-server로 제공하고, 프론트는 `GET /categories`로 조회해 사용 (하드코딩 복제 지양)
+
+## 작업 방식
+
+- 요청 범위 밖 리팩터·불필요한 파일 추가 금지
+- 새 화면은 `src/views/`, 재사용 UI는 `src/components/`에 두는 것을 기본으로 함

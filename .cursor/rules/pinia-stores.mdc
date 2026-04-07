@@ -1,0 +1,18 @@
+---
+description: Pinia 스토어 작성 규칙
+globs: "**/stores/**/*.js"
+alwaysApply: false
+---
+
+# Pinia 스토어
+
+- **`defineStore` + Composition 스타일** (`() => { ... return { ... } }`) 유지.
+- **서버 통신**: `src/api/client.js`의 axios 인스턴스만 import.
+- **비동기 액션**: `isLoading` / `errorMessage`(또는 동일 패턴)로 UI 피드백; 성공 시 폼 일부 초기화는 도메인 규칙에 맞게만 수행.
+- **카테고리**: `db.json`의 `categories`를 `GET /categories`로 불러와 사용하고, 스토어에 목록을 하드코딩하지 않기.
+
+```js
+// ✅ 액션에서 API 호출
+import apiClient from '../api/client'
+await apiClient.post('/transactions', payload)
+```
