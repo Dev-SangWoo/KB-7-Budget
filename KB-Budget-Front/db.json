@@ -1,0 +1,44 @@
+{
+    "transactions": [
+      {
+        "id": "1",
+        "type": "income",
+        "date": "2026-04-01",
+        "amount": 150000,
+        "category": "부수입",
+        "memo": "미국 주식 배당금 입금"
+      },
+      {
+        "id": "2",
+        "type": "expense",
+        "date": "2026-04-02",
+        "amount": 65000,
+        "category": "건강/피트니스",
+        "memo": "단백질 보충제 구매"
+      },
+      {
+        "id": "3",
+        "type": "expense",
+        "date": "2026-04-04",
+        "amount": 8000,
+        "category": "식비",
+        "memo": "스터디 모임 커피"
+      },
+      {
+        "id": "4",
+        "type": "expense",
+        "date": "2026-04-05",
+        "amount": 35000,
+        "category": "도서/교육",
+        "memo": "Core JavaScript 책 구매"
+      }
+    ],
+    "categories": [
+      { "id": "1", "type": "income", "name": "급여" },
+      { "id": "2", "type": "income", "name": "부수입" },
+      { "id": "3", "type": "expense", "name": "식비" },
+      { "id": "4", "type": "expense", "name": "교통비" },
+      { "id": "5", "type": "expense", "name": "도서/교육" },
+      { "id": "6", "type": "expense", "name": "건강/피트니스" }
+    ]
+  }
